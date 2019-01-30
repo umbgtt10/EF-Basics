@@ -1,0 +1,28 @@
+﻿How to use entity framework with the code first approach starting from scratch (no DB):
+
+- Create a blank project
+- Code your domain entities
+- Install Entity Framework
+- Create a DbContext Derivative as follows:
+
+    public class YourDbContext : DbContext
+    {
+	    // For each domain entity 
+        public DbSet<[Entity]> Entities { get; set; }
+
+        public YourDbContext()
+            : base("name=YourDbConnection")
+        {
+            
+        }
+    }
+
+- Update your connection string accordingly in app.config as follows:
+  <connectionStrings>
+    <add name="YourDbConnection" connectionString="data source=DESKTOP-3ABOOA3\SQLEXPRESS01; initial catalog=<DbName>; integrated security=SSPI" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+
+- In the package manager console you type "enable-migrations"
+For each migration:
+- In the package manager console you type "add-migration <Migration name>"
+- In the package manager console you type "update-database"

@@ -1,0 +1,15 @@
+﻿How to use entity framework with the code first approach starting from an existing db:
+
+- Create a blank project.
+- Add a new item of type "ADO.NET Entity Data Model" to the project. Go through the whole configuration and ensure to select all the tables.
+- This will create the entities and the DbContext
+- Refactor the entities with care as appropriate
+- Ensure that the connection string added in app.config is correct.
+
+From now on it is possible to work in the code first fashion:
+- In the package manager console you type "enable-migrations"
+- For the first migration type in the package manager console "add-migration <migration name> -ignoreChanges -force" (This will create an empty migration)
+- In the package manager console you type "update-database"
+For each subsequent migration:
+- In the package manager console you type "add-migration <Migration name>"
+- In the package manager console you type "update-database"

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst", "CodeFirst\CodeFirst.csproj", "{7CCF74BC-D145-4A5B-B99D-F5AEC0410CDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstFromDb", "CodeFirstFromExistingDb\CodeFirstFromDb\CodeFirstFromDb.csproj", "{125C4B44-0CA2-41EE-942A-98A2B483EF22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CCF74BC-D145-4A5B-B99D-F5AEC0410CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CCF74BC-D145-4A5B-B99D-F5AEC0410CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CCF74BC-D145-4A5B-B99D-F5AEC0410CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CCF74BC-D145-4A5B-B99D-F5AEC0410CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{125C4B44-0CA2-41EE-942A-98A2B483EF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{125C4B44-0CA2-41EE-942A-98A2B483EF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{125C4B44-0CA2-41EE-942A-98A2B483EF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{125C4B44-0CA2-41EE-942A-98A2B483EF22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D37CE6E-32C4-4C40-9AED-9E075302CE6E}
+	EndGlobalSection
+EndGlobal
