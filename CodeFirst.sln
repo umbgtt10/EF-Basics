@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstExercise", "CodeFi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentApiExercise", "FluentApiExercise\FluentApiExercise.csproj", "{B0425C40-2C01-46EE-B4B4-4B2E7465033B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryingData", "QueryingData\QueryingData.csproj", "{2AEE16B3-AFD2-4C91-9751-E37310E4689C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B0425C40-2C01-46EE-B4B4-4B2E7465033B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0425C40-2C01-46EE-B4B4-4B2E7465033B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0425C40-2C01-46EE-B4B4-4B2E7465033B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AEE16B3-AFD2-4C91-9751-E37310E4689C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AEE16B3-AFD2-4C91-9751-E37310E4689C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AEE16B3-AFD2-4C91-9751-E37310E4689C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AEE16B3-AFD2-4C91-9751-E37310E4689C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

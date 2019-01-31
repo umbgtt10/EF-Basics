@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Docs\Fluent-API-Cheat-Sheet.pdf" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="entityframework">
