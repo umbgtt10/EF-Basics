@@ -1,0 +1,57 @@
+﻿- When an entire class needs to be deleted, it is safer to proceed in small steps. First remove the reference of the entity from
+other classes then create and apply the migration.
+
+- Then delete the class and the reference from DbContext derivative and create a new migration.
+- (Optional) It is usually safer to not just apply the DropTable created by EF, but rather to create a backup of the table either by adding raw
+SQL statements or by re-using the code provided in the down method. Here an example of generated code:
+
+        public override void Up()
+        {
+            DropTable("dbo.Categories");
+        }
+        
+        public override void Down()
+        {
+            CreateTable(
+                "dbo.Categories",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+        }
+
+which can be augmented in the following way:
+
+        public override void Up()
+        {
+            CreateTable(
+                    "dbo._Categories",
+                    c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+
+            Sql("INSERT INTO _Categories (Name) Select Name FROM Categories");
+
+            DropTable("dbo.Categories");
+        }
+        
+        public override void Down()
+        {
+            CreateTable(
+                "dbo.Categories",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+
+            Sql("INSERT INTO Categories (Name) Select Name FROM _Categories");
+
+            DropTable("dbo._Categories");
+        }

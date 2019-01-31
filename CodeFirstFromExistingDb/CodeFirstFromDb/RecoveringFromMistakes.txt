@@ -1,0 +1,6 @@
+﻿- Never delete applied migrations
+- Add new migrations to make up for mistakes if applicable.
+- Otherwise use the following command to move to a specific migration (with the latest version of the source):
+  Update-Migration -TargetMigration:<MigrationName>
+  For example: Update-Migration -TargetMigration:RenameTitleToNameInCoursesTable
+  then check out the corresponding version of the code

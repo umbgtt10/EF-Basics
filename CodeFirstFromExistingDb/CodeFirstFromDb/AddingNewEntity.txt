@@ -1,4 +1,0 @@
-﻿- Create the new entity as a plain class
-- Add the corresponding line to the DbContext derivative
-- Add a new migration with the command "add-migration <migration name such as "Add<Entities>Table">" 
-- Persist the changes with "udpate-database"

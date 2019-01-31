@@ -1,0 +1,20 @@
+﻿- Create the new entity as a plain class
+- Add the corresponding line to the DbContext derivative
+- Add a new migration with the command "add-migration <migration name such as "Add<Entities>Table">" 
+- (Optional) add data to the to-be-added table by using SQL statements in the UP method of the migration as follows:
+
+        public override void Up()
+        {
+            //
+            // Code generated
+            //       
+            Sql("INSERT INTO ..... ");
+            Sql("INSERT INTO ..... ");
+        }
+
+- Persist the changes with "udpate-database"
+
+- Then add a reference of the newly created entity in one or more of the existing entities 
+- Add a new migration with the command "add-migration <Add<Entity>ColumnTo<OtherEntity>>" 
+- (Optional) Add SQL statements as appropriate
+- Persist the changes with "udpate-database"

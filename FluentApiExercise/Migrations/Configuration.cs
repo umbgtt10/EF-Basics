@@ -1,18 +1,18 @@
-namespace CodeFirstFromDb.Migrations
+namespace FluentApiExercise.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<PlutoContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ExerciseDbContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;            
+            AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(PlutoContext context)
+        protected override void Seed(ExerciseDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

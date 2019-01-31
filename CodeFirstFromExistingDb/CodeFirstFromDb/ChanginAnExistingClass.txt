@@ -1,0 +1,24 @@
+﻿- When changing an existing class (for example by renaming a column name) the add-migration command might create 
+SQL statements that lead to data loss. In this case it is safer to override the generated code with something safer For example
+instead of dropping a column and then adding a new one, it is advisable to rename the column by using a method or a SQL statement:
+
+        public override void Up()
+        {
+            // The following generated code would be too dangerous
+            // AddColumn("dbo.Courses", "Name", c => c.String(nullable:false));
+            // Alternative: Sql("UPDATE Courses SET Name = Title");
+            // DropColumn("dbo.Courses", "Title");
+            RenameColumn("dbo.Courses", "Title", "Name");            
+        }
+
+		or:
+
+        public override void Up()
+        {
+            // The following generated code would be too dangerous. We add a line in the middle
+            AddColumn("dbo.Courses", "Name", c => c.String(nullable:false));
+            Sql("UPDATE Courses SET Name = Title");
+            DropColumn("dbo.Courses", "Title");        
+        }
+
+- Remember to update the Down method accordingly
